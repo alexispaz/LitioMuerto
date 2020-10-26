@@ -55,9 +55,9 @@ open(u,action='read',file=archivo)
 ! In case a specific frame wants to be loaded
 if(present(frame)) then
   do i=1,frame-1
-    read(u,*) j
+    read(u,*) natoms
     read(u,*)
-    do j = 1, j
+    do j = 1, natoms
       read(u,*)
     enddo
   enddo
@@ -67,12 +67,14 @@ endif
 read(u,*) natoms
 allocate(a(natoms))
 read(u,*)
-do i = 1, j
+do i = 1, natoms
   read(u,*) a(i)%sym, a(i)%pos(:)
 
   select case(a(i)%sym)
   case('CG')
   case('Li')
+    a(i)%existe=.false.
+    a(i)%pos(:)=[0,0,0]
   case default
     print *, 'WARNING: atom type unknown'
   end select
@@ -83,10 +85,10 @@ close(u)
 
 end subroutine 
 
-subroutine writexyz(a)
+subroutine writexyz(a,u)
 ! Read frame `frame` of xyz file `archivo` and save coordinates and symbol into `a` atom array
 use constants, only: find_io
-integer                            :: i,j,u,io
+integer                            :: i,j,u
 type(atom),allocatable,intent(in)  :: a(:)
 character(2)                       :: sym
 

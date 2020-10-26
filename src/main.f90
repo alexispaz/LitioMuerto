@@ -28,16 +28,16 @@ if(narg/=1) then
   stop
 endif
   
-call get_command_argument(carg,arg,larg)
+call get_command_argument(1,arg,larg)
                  
 ! Input
 call readentrada(trim(arg))
 
 ! Compute Bond Order
-call all_bond_order(2._dp,3._dp)
+call all_bond_order(r1,r2)
 
 ! Open out
-open(13,action='write',file='frames.out')
+open(13,action='write',file='out.xyz')
                     
 ! Loop until delete all lithium atoms  
 n=0
@@ -49,9 +49,8 @@ do ns=1,nsteps
     a(i)%existe=.false.
   endif
 
-  if(mod(ns,each)==0) call writexyz(a)
+  if(mod(ns,each)==0) call writexyz(a,13)
   
-
 enddo
 
 close(13)

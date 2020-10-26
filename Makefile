@@ -210,7 +210,7 @@ CCDEPMODE = depmode=none
 CFLAGS = -g -O2
 CPPFLAGS = 
 CYGPATH_W = echo
-DEFS = -DPACKAGE_NAME=\"litiom\" -DPACKAGE_TARNAME=\"litiom\" -DPACKAGE_VERSION=\"a0ee-dirty\" -DPACKAGE_STRING=\"litiom\ a0ee-dirty\" -DPACKAGE_BUGREPORT=\"alexis.paz@gmail.com\" -DPACKAGE_URL=\"\" -DPACKAGE=\"litiom\" -DVERSION=\"a0ee-dirty\"
+DEFS = -DPACKAGE_NAME=\"litiom\" -DPACKAGE_TARNAME=\"litiom\" -DPACKAGE_VERSION=\"9024\" -DPACKAGE_STRING=\"litiom\ 9024\" -DPACKAGE_BUGREPORT=\"alexis.paz@gmail.com\" -DPACKAGE_URL=\"\" -DPACKAGE=\"litiom\" -DVERSION=\"9024\"
 DEPDIR = .deps
 ECHO_C = 
 ECHO_N = -n
@@ -234,16 +234,16 @@ OBJEXT = o
 PACKAGE = litiom
 PACKAGE_BUGREPORT = alexis.paz@gmail.com
 PACKAGE_NAME = litiom
-PACKAGE_STRING = litiom a0ee-dirty
+PACKAGE_STRING = litiom 9024
 PACKAGE_TARNAME = litiom
 PACKAGE_URL = 
-PACKAGE_VERSION = a0ee-dirty
+PACKAGE_VERSION = 9024
 PATH_SEPARATOR = :
 RANLIB = ranlib
 SET_MAKE = 
 SHELL = /bin/sh
 STRIP = 
-VERSION = a0ee-dirty
+VERSION = 9024
 abs_builddir = /home/alexis/github/LitioMuerto
 abs_srcdir = /home/alexis/github/LitioMuerto
 abs_top_builddir = /home/alexis/github/LitioMuerto
