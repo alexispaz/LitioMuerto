@@ -1,5 +1,5 @@
 module types
-use constants, only:dp, dm
+use gems_constants, only:dp, dm
 
 implicit none
 public
@@ -87,7 +87,7 @@ end subroutine
 
 subroutine writexyz(a,u)
 ! Read frame `frame` of xyz file `archivo` and save coordinates and symbol into `a` atom array
-use constants, only: find_io
+use gems_constants, only: find_io
 integer                            :: i,j,u
 type(atom),allocatable,intent(in)  :: a(:)
 character(2)                       :: sym

@@ -7,22 +7,6 @@ lm_SOURCES = Random.F90  \
 	     main.f90        
 	     Graph.f90        
 
-# Fortran Preprocesor Templates	       
-FPTDDS=$(top_srcdir)/lib/fpt/include/
-AM_FCFLAGS = -I$(FPTDDS)
-include_HEADERS = $(FPTDDS)/prep.inc \
-                  $(FPTDDS)/vector_header.inc \
-                  $(FPTDDS)/vector_body.inc   \
-                  $(FPTDDS)/list_header.inc   \
-                  $(FPTDDS)/list_body.inc     \
-                  $(FPTDDS)/dlist_header.inc  \
-                  $(FPTDDS)/dlist_body.inc    \
-                  $(FPTDDS)/cdlist_header.inc \
-                  $(FPTDDS)/cdlist_body.inc   \
-                  $(FPTDDS)/arrayofptrs_header.inc
- 
-
-
 
 DEBUG_FLAGS = -g -O0 -p
 PROF_FLAGS = -p 
